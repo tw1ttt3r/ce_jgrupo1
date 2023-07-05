@@ -1,0 +1,27 @@
+/* selectores */
+/* id # */
+#principal {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+}
+/* clase o class . */
+.contenedor {
+  width: 150px;
+  height: 150px;
+  background-color: beige;
+}
+/* etiqueta o tag nombre de la etiqueta */
+section {
+  color: antiquewhite;
+}
+
+/* conjuncion de selectores */
+#principal:hover, div:hover, .contenedor:hover {
+  border: 2px solid red;
+}
+
+/* selector de jerarquia */
+.contenedor div {
+  display: none;
+}
