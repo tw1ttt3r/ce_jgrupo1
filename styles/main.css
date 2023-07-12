@@ -25,3 +25,49 @@ section {
 .contenedor div {
   display: none;
 }
+
+.seccion {
+  height: 100px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: ". . ." 
+                       ". espacio1 ."
+                       "espacio3 . espacio2";
+}
+
+.seccion div {
+  width: 25px;
+  height: 25px;
+  background-color: blue;
+}
+
+.hijo1 {
+  /* grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3; */
+  grid-area: espacio1;
+}
+
+.hijo2 {
+  /* grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3; */
+  grid-area: espacio2;
+}
+
+.hijo3 {
+  /* grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 3; */
+  grid-area: espacio3;
+}
