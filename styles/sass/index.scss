@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'mixins';
+@import 'functions';
+
+#principal {
+  width: pow(7, 3);
+  height: 300px;
+  border: $border-principal;
+  // nesting
+
+  &:hover {
+    @include borderhover;
+  }
+
+  .contenedor {
+    width: 150px;
+    height: 150px;
+    background-color: $bgColor-contenedor;
+
+    &:hover {
+      @include borderhover;
+    }
+
+    div {
+      display: none;
+    }
+  }
+
+  div:hover {
+    @include borderhover;
+  }
+  
+  section {
+    color: $color-section;
+  }
+  
+  .seccion {
+    height: 100px;
+    display: grid;
+    grid-template-columns: $seccion-template-columns;
+    grid-template-rows: $seccion-template-rows;
+    grid-template-areas: $seccion-template-areas;
+
+    div {
+      width: 25px;
+      height: 25px;
+      background-color: blue;
+
+      &.hijo1 {
+        grid-area: espacio1;
+      }
+      
+      &.hijo2 {
+        grid-area: espacio2;
+      }
+      
+      &.hijo3 {
+        grid-area: espacio3;
+      }
+    }
+  }
+}
